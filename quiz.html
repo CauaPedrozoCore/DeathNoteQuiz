@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Death Note - Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        
+        <header class="quiz-header-interno">
+            <h1 class="logo-death-note">Death Note</h1>
+            <h2 class="subtitulo-quiz">QUIZ</h2>
+        </header>
+
+        <div class="linha-divisoria"></div>
+
+        <div class="status-container">
+            <div class="status-item">
+                <span class="status-label">QUESTAO</span>
+                <span id="numero-questao" class="status-valor">1 / 8</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">PONTOS</span>
+                <span id="valor-pontuacao" class="status-valor">0</span> 
+            </div>
+        </div>
+
+        <div class="linha-divisoria" style="margin: 15px 0 25px 0;"></div>
+
+        <div class="container-imagem-pergunta">
+            <img id="imagem-pergunta" src="BancoImgs/questaoUm.jpeg" alt="Questão">
+        </div>
+
+        <div class="linha-divisoria" style="margin: 25px 0 20px 0;"></div>
+
+        <p id="texto-pergunta" class="pergunta-texto-estilo">
+            Carregando pergunta...
+        </p>
+
+        <div class="alternativas-grid">
+            <button class="btn-opcao" onclick="verificarResposta(0)">
+                <span class="letra">A.</span> <span class="texto-btn">Opção A</span>
+            </button>
+            <button class="btn-opcao" onclick="verificarResposta(1)">
+                <span class="letra">B.</span> <span class="texto-btn">Opção B</span>
+            </button>
+            <button class="btn-opcao" onclick="verificarResposta(2)">
+                <span class="letra">C.</span> <span class="texto-btn">Opção C</span>
+            </button>
+            <button class="btn-opcao" onclick="verificarResposta(3)">
+                <span class="letra">D.</span> <span class="texto-btn">Opção D</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

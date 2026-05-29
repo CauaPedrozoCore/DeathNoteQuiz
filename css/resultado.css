@@ -1,0 +1,125 @@
+.resultado-container {
+    width: 100%;
+    max-width: 720px; /* tamanho máximo do seu index pra ficarem parecidos */
+    border: 1px solid #3E1919;
+    background-color: #000000; 
+    padding: 40px 45px;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.resultado-header-interno {
+    text-align: center;
+}
+
+/* QUIZ FINALIZADOs */
+.subtitulo-quiz-finalizado {
+    font-family: 'DeathNoteFont', monospace;
+    font-size: 2.5rem;
+    color: #ffffff;
+    letter-spacing: 4px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+/* bloco que segura os textos */
+.resultado-bloco-textos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+/* frase do anime */
+.texto-parabens {
+    font-family: 'DeathNoteFont', sans-serif;
+    color: #7C0A0A; /* Mantendo o vermelho gótico padrão */
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+
+.texto-frase-anime {
+    font-family: 'Arial', sans-serif;
+    font-style: italic;
+    color: #b0b0b0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* area da pontuação */
+.caixa-score-final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.label-sua-nota {
+    font-family: 'DeathNoteFont', sans-serif;
+    color: #7C0A0A;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.valor-nota-final {
+    font-family: 'DeathNoteFont', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.num-vermelho-vivo {
+    font-size: 7.5rem;
+    color: #ff0000;
+    line-height: 1;
+}
+
+.barra-maximo {
+    font-size: 5.5rem; /* tem que aumentar bem proporcionalmente ao numero vermelho */
+    color: #ffffff;
+    line-height: 1;
+}
+
+/* botão jogar novamente */
+.btn-reiniciar {
+    background: transparent;
+    border: 1px solid #3E1919;
+    color: #ffffff;
+    font-family: 'DeathNoteFont', sans-serif;
+    font-size: 1.4rem;
+    padding: 12px 40px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: all 0.2s ease;
+}
+
+.btn-reiniciar:hover {
+    background-color: #120505;
+    border-color: #7C0A0A;
+    transform: scale(1.02);
+    box-shadow: 0 0 12px rgba(124, 10, 10, 0.7);
+}
+
+/* imagem do light */
+.ilustracao-light-fixo {
+    position: fixed;
+    bottom: 10px;
+    /* Usa o mesmo cálculo do L no index, mas aplicado na propriedade right */
+    right: calc(50vw - 640px); 
+    width: 350px; /* Exatamente o mesmo tamanho padrão do L para manter o equilíbrio visual */
+    height: auto;
+    z-index: 5;
+    pointer-events: none;
+    transition: right 0.3s ease;
+}
+
+/* Responsivo */
+@media (max-width: 850px) {
+    .ilustracao-light-fixo {
+        display: none;
+    }
+}

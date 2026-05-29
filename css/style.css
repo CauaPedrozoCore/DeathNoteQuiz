@@ -1,0 +1,227 @@
+/* as fontes adicionadas */
+@font-face {
+    font-family: 'CloisterBlack';
+    src: url('../fonts/CloisterBlack.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DeathNoteFont';
+    src: url('../fonts/Death Note.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* estilos gerais da página */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff; /* cor do texto tudo branco */
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+    padding: 20px;
+}
+
+/* aqui é a imagem do L */
+.ilustracao-l {
+    position: fixed;
+    bottom: 10px;
+    /* Mudamos de 'left: 40px' para usar uma posição baseada na largura da tela (vw) */
+    left: calc(50vw - 640px); 
+    width: 300px; /* tamanho do bixinho */
+    height: auto;
+    z-index: 5;
+    pointer-events: none; /* isso aqui faz não ter efeito quando passa o mouse em cima */
+    transition: left 0.3s ease;
+}
+
+/* container principal */
+.quiz-container {
+    width: 100%;
+    max-width: 720px;
+    border: 1px solid #3E1919;
+    background-color: #000000; 
+    padding: 40px 45px;
+    position: relative;
+    z-index: 10;
+}
+
+/* aqui fica o cabeçalho/header */
+.quiz-header {
+    text-align: center;
+}
+
+.logo-death-note {
+    font-family: 'CloisterBlack', serif;
+    font-size: 5.2rem;
+    color: #3E1919;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.subtitulo-quiz {
+    font-family: 'DeathNoteFont', monospace;
+    font-size: 2.5rem;
+    color: #ffffff;
+    letter-spacing: 4px;
+    font-weight: normal;
+}
+
+.linha-divisoria {
+    width: 100%;
+    height: 1px;
+    background-color: #3E1919;
+    margin: 25px 0;
+}
+
+/* aqui é para os blocos de texto dentro do container */
+.quiz-welcome {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.texto-introducao p {
+    font-family: 'DeathNoteFont', sans-serif;
+    font-size: 1.35rem; /* a fonte é bem compacta então aumentado um pouquinho */
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* destaques texto */
+.destaque-vermelho-texto {
+    color: #7C0A0A;
+}
+
+/* estilização da regra 1 */
+.citacao-regra {
+    border-left: 2px solid #7C0A0A; /* Marcador vertical */
+    padding-left: 15px;
+    margin-top: 5px;
+}
+
+.regra-texto {
+    font-family: 'DeathNoteFont', sans-serif;
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+
+.regra-subtitulo {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.75rem;
+    color: #7C0A0A;
+    letter-spacing: 1px;
+    display: block;
+    margin-top: 5px;
+}
+
+/* grid de informações = 3 bloquinhos */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.card-info {
+    border: 1px solid #3E1919;
+    background: transparent;
+    padding: 15px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.numero-info {
+    font-family: 'Georgia', serif;
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+.label-info {
+    font-family: 'Georgia', serif;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+/* botão de iniciar o quiz */
+.section-action {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.btn-iniciar {
+    display: inline-block;
+    background-color: #7C0A0A;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'DeathNoteFont', monospace;
+    font-size: 2.2rem;
+    padding: 8px 30px;
+    border: 1px solid #ffffff;
+    text-align: center;
+    transition: background 0.2s ease;
+}
+
+.btn-iniciar:hover {
+    background-color: #a11212;
+}
+
+/* caveira lá de baixo */
+.quiz-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.linha-rodape {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #3E1919;
+}
+
+.imagem-caveira-rodape {
+    height: 100px;
+    width: auto;
+    display: block;
+    padding: 0 10px;
+}
+
+
+
+/* responsivo */
+@media (max-width: 850px) {
+    .ilustracao-l {
+        display: none; /* tirando o l pra não ficar bugado */
+        left: 15px;
+        width: 240px;
+    }
+    .quiz-container {
+        padding: 30px 20px;
+    }
+    .logo-death-note {
+        font-size: 3.8rem;
+    }
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Death Note - Resultado</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resultado.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <header class="resultado-header-interno">
+            <h1 class="logo-death-note">Death Note</h1>
+            <h2 class="subtitulo-quiz-finalizado">QUIZ FINALIZADO!</h2>
+        </header>
+
+        <div class="linha-divisoria"></div>
+
+        <div class="resultado-bloco-textos">
+            <div class="caixa-mensagem-final">
+                <p class="texto-parabens">PARABENS POR TERMINAR O QUIZ!</p>
+                <p id="frase-veredito" class="texto-frase-anime">"Eu serei o Deus do novo mundo!"</p>
+            </div>
+
+            <div class="caixa-score-final">
+                <span class="label-sua-nota">SUA NOTA</span>
+                <div class="valor-nota-final">
+                    <span id="nota-acertos" class="num-vermelho-vivo">0</span>
+                    <span class="barra-maximo">/ 8</span>
+                </div>
+            </div>
+
+            <button class="btn-reiniciar" onclick="reiniciarQuiz()"> JOGAR NOVAMENTE </button>
+        </div>
+    </div>
+
+    <img src="BancoImgs/light-FINAL.png" alt="Light Yagami" class="ilustracao-light-fixo">
+
+    <script>
+        window.onload = function() {
+            const pontuacao = parseInt(localStorage.getItem("pontuacaoFinal")) || 0;
+            document.getElementById("nota-acertos").innerText = pontuacao;
+
+            const fraseElemento = document.getElementById("frase-veredito");
+            if (pontuacao === 8) {
+                fraseElemento.innerText = '"Eu serei o Deus do novo world!" — Light Yagami';
+            } else if (pontuacao >= 5) {
+                fraseElemento.innerText = '"Não importa o quão genial você seja, você sozinho não pode mudar o mundo." — L Lawliet';
+            } else if (pontuacao >= 3) {
+                fraseElemento.innerText = '"Arriscar a vida e desperdiçá-la totalmente em vão são duas coisas completamente diferentes." — L Lawliet';
+            } else {
+                fraseElemento.innerText = '"Os humanos são tão interessantes..." — Ryuk';
+            }
+        };
+
+        function reiniciarQuiz() {
+            localStorage.removeItem("pontuacaoFinal");
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

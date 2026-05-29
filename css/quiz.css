@@ -1,0 +1,101 @@
+.quiz-header-interno {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* area dos contadores atualizada com a fonte Death Note */
+.status-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 5px; 
+}
+
+.status-label {
+    display: block;
+    font-family: 'DeathNoteFont', sans-serif;
+    font-size: 1.1rem; 
+    color: #7C0A0A;
+    letter-spacing: 2px;
+}
+
+.status-valor {
+    font-family: 'DeathNoteFont', sans-serif;
+    font-size: 1.6rem;
+    color: #ffffff; /* define a cor dos valores dos status */
+}
+
+.status-item:last-child {
+    text-align: right;
+}
+
+/* moldura das imagem */
+.container-imagem-pergunta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container-imagem-pergunta img {
+    width: 440px; /* largura fixa */
+    height: 220px; /* altura fixa */
+    border: 3px solid #3E1919; 
+    object-fit: cover;
+    display: block;
+}
+
+/* texto da pergunta */
+.pergunta-texto-estilo {
+    font-family: 'DeathNoteFont', sans-serif;
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 35px;
+    line-height: 1.4;
+}
+
+/* alinhamento dos botões */
+.alternativas-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* deixando as caixas de alternativas bonitinhas */
+.btn-opcao {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #3E1919;
+    color: #ffffff;
+    padding: 15px 20px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif; 
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-opcao .letra {
+    color: #ffffff;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.btn-opcao:hover {
+    background-color: #120505;
+    border-color: #7C0A0A;
+    transform: scale(1.015); 
+    box-shadow: 0 0 10px rgba(124, 10, 10, 0.6);
+}
+
+/* O NEGOCIO DO JS PRA SABER SE É ERRADO OU CERTA */
+.btn-opcao.correto {
+    background-color: #0b240b !important;
+    border-color: #00ff00 !important;
+}
+
+.btn-opcao.errado {
+    background-color: #240b0b !important;
+    border-color: #ff0000 !important;
+}
