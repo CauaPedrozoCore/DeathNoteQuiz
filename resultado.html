@@ -55,9 +55,10 @@
         };
 
         function reiniciarQuiz() {
-            localStorage.removeItem("pontuacaoFinal");
-            window.location.href = "index.html";
-        }
+        localStorage.removeItem("pontuacaoFinal");
+        localStorage.removeItem("historicoRespostas");
+        window.location.href = "index.html";
+    }
     </script>
 </body>
 </html>
