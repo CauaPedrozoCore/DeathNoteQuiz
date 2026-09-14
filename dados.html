@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Death Note Quiz</title>
+    <link rel="stylesheet" href="css/dados.css">
+</head>
+<body>
+
+    <img src="BancoImgs/L-index.png" class="ilustracao-l" alt="L Lawliet">
+
+    <div class="quiz-container">
+        
+        <header class="quiz-header">
+            <h1 class="logo-death-note">Death Note</h1>
+            <h2 class="subtitulo-quiz">CADASTRO</h2>
+        </header>
+
+        <div class="linha-divisoria"></div>
+        
+        <section>
+            <form action="">
+                <div>
+                    <label> Nome: </label>
+                    <input name="nome" type="text" required>
+                </div>
+
+                <div>
+                    <label> Email: </label>
+                    <input name="email" type="email" required>
+                </div>
+
+                <div>
+                    <label> Idade: </label>
+                    <input name="idade" type="number" required>
+                </div>
+
+                <div class="sexo">
+                    <label> Sexo: </label>
+                    <select name="sexo">
+                        <option value="MASC"> MASCULINO </option>
+                        <option value="FEM"> FEMININO </option>
+                    </select>
+                </div>
+
+                <div class="section-action" style="margin-top: 20px;">
+                    <button type="submit" class="btn-iniciar">CADASTRAR</button>
+                </div>
+            </form>
+        </section>
+        <script src="js/dados.js"></script>
+    </div>
+</body>
+</html>
